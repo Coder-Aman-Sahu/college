@@ -1,0 +1,112 @@
+1. create following tables:
+
+bonus:
+-----
+Name                             Null?    Type
+ -------------------------------- -------- ----------------------
+ ENAME                                     VARCHAR2(10 CHAR)
+ JOB                                       VARCHAR2(9 CHAR)
+ SAL                                       NUMBER
+ COMM                                      NUMBER
+
+emp:
+----
+Name                             Null?    Type
+ -------------------------------- -------- ----------------------
+ EMPNO                            NOT NULL NUMBER(4)
+ ENAME                                     VARCHAR2(10 CHAR)
+ JOB                                       VARCHAR2(9 CHAR)
+ MGR                                       NUMBER(4)
+ HIREDATE                                  DATE
+ SAL                                       NUMBER(7,2)
+ COMM                                      NUMBER(7,2)
+ DEPTNO                                    NUMBER(2)
+
+dept:
+----
+Name                             Null?    Type
+ -------------------------------- -------- ----------------------
+ DEPTNO                           NOT NULL NUMBER(2)
+ DNAME                                     VARCHAR2(14 CHAR)
+ LOC                                       VARCHAR2(13 CHAR)
+
+salgrade:
+--------
+Name                             Null?    Type
+ -------------------------------- -------- ----------------------
+ GRADE                            NOT NULL NUMBER
+ LOSAL                                     NUMBER
+ HISAL                                     NUMBER
+
+2. Insert the following data into tables:
+
+emp table:
+
+EMPNO ENAME      JOB              MGR HIREDATE           SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- ----------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-1980        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-1981       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-1981       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-1981       2975                    20
+      7654 MARTIN     SALESMAN        7698 28-SEP-1981       1250       1400         30
+      7698 BLAKE      MANAGER         7839 01-MAY-1981       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-1981       2450                    10
+      7788 SCOTT      ANALYST         7566 19-APR-1987       3000                    20
+      7839 KING       PRESIDENT            17-NOV-1981       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-1981       1500          0         30
+      7876 ADAMS      CLERK           7788 23-MAY-1987       1100                    20
+      7900 JAMES      CLERK           7698 03-DEC-1981        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-1981       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-1982       1300                    10
+
+dept table:
+
+ DEPTNO DNAME          LOC
+---------- -------------- -------------
+        10 ACCOUNTING     NEW YORK
+        20 RESEARCH       DALLAS
+        30 SALES          CHICAGO
+        40 OPERATIONS     BOSTON
+
+salgrade table:
+
+GRADE      LOSAL      HISAL
+---------- ---------- ----------
+         1        700       1200
+         2       1201       1400
+         3       1401       2000
+         4       2001       3000
+         5       3001       9999
+
+Answer the following queries:
+
+0. describe all table structures and data in inserted order.
+1. select all the information from the emp table.
+2. Display ename, job, hiredate from emp table.
+3. select all employees whose salary between 1000 and 2000
+4. List department names and numbers in the department name order
+5. List the details of the employees in dept 10 and 20 in alphabetical order of names
+6. List the names of all clerks in dept 20.
+7. List the employee number,name,job,title and hiredate of employee in department 10?
+8. Select the name and salary of all employee who are clerks?
+9. Select the name and annual salary of all employees?
+10. List the name,job,salary of everyone hired on december 17,1980?
+11. List the department name and department number for departments with numbers greater than or equal to 20?
+12. List the names of employees whose salaries are less than 2500?
+13. Display the name, monthly salary and daily salary and hourly salary for employees assume that the sal column in the table is the     monthly salary, that there are 22 working days in a month,and that there are 8 working hours in a day. rename the columns as     monthly,daily,hourly?
+14. List the names and employer’s numbers of managers who earn more than 2600 display in alphabetic order by name?
+15. Display all employee names who have 'TH' or 'LL' in them?
+16. List the details of employees in departments 10 and 20 in alphabtical order of name?
+17. Select the information about manager and the president from the column job in the table emp. Order the result by department number?
+18. List the employee name that do not end with “S”?
+19. List the employee name that start with “C”?
+20. List the name,job and department of everyone whose name falls in the alphabetic range “C” to “F”?
+21. List employee details working in department 20,30 or 40?
+22. List of employees whose names start with “M” and end with “R”?
+23. Display all employee who were hired during 1983?
+24. Display the data as shown below:
+		Smith has held the position of clerk in department 20 since 10 june’83.
+		Allen has held the position of salesman in department 30since 13 june 1983.
+		Ward has held position of salesman in department 30 since 13 june 1983.
+
+**********************************************************************************************
